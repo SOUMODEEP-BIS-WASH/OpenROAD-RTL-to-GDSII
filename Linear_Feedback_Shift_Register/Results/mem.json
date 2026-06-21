@@ -1,0 +1,434 @@
+{
+  "creator": "Yosys 0.63+89 (git sha1 de99d67bb, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "LFSR": {
+      "attributes": {
+        "hdlname": "LFSR",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:4.1-13.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 4, 5, 6, 7 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:337:slice$1006": {
+          "hide_name": 1,
+          "type": "$sdff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:20.5-31.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 6 ],
+            "Q": [ 7 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$1007": {
+          "hide_name": 1,
+          "type": "$sdff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:20.5-31.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 8 ],
+            "Q": [ 4 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$1008": {
+          "hide_name": 1,
+          "type": "$sdff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:20.5-31.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 4 ],
+            "Q": [ 5 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$1009": {
+          "hide_name": 1,
+          "type": "$sdff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:20.5-31.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 5 ],
+            "Q": [ 6 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$not$/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9$993": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9.14-9.26"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$xor$/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9$992": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9.16-9.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 6 ],
+            "Y": [ 9 ]
+          }
+        },
+        "dff1": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9.9-9.45",
+            "module": "dff",
+            "module_hdlname": "dff",
+            "module_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:16.1-32.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "dff2": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:10.9-10.37",
+            "module": "dff",
+            "module_hdlname": "dff",
+            "module_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:16.1-32.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "dff3": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:11.9-11.37",
+            "module": "dff",
+            "module_hdlname": "dff",
+            "module_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:16.1-32.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "dff4": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:12.9-12.37",
+            "module": "dff",
+            "module_hdlname": "dff",
+            "module_src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:16.1-32.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$xor$/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9$992_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:9.16-9.25"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:5.31-5.32"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:5.11-5.14"
+          }
+        },
+        "dff1.D": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "dff1 D",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.11-17.12"
+          }
+        },
+        "dff1.Q": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "dff1 Q",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:18.16-18.17"
+          }
+        },
+        "dff1.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "dff1 clk",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.13-17.16"
+          }
+        },
+        "dff1.prst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "dff1 prst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.21-17.25"
+          }
+        },
+        "dff1.rst": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "dff1 rst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.17-17.20"
+          }
+        },
+        "dff2.D": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "dff2 D",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.11-17.12"
+          }
+        },
+        "dff2.Q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "dff2 Q",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:18.16-18.17"
+          }
+        },
+        "dff2.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "dff2 clk",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.13-17.16"
+          }
+        },
+        "dff2.prst": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "dff2 prst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.21-17.25"
+          }
+        },
+        "dff2.rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "dff2 rst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.17-17.20"
+          }
+        },
+        "dff3.D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "dff3 D",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.11-17.12"
+          }
+        },
+        "dff3.Q": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "dff3 Q",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:18.16-18.17"
+          }
+        },
+        "dff3.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "dff3 clk",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.13-17.16"
+          }
+        },
+        "dff3.prst": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "dff3 prst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.21-17.25"
+          }
+        },
+        "dff3.rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "dff3 rst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.17-17.20"
+          }
+        },
+        "dff4.D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "dff4 D",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.11-17.12"
+          }
+        },
+        "dff4.Q": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "hdlname": "dff4 Q",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:18.16-18.17"
+          }
+        },
+        "dff4.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "dff4 clk",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.13-17.16"
+          }
+        },
+        "dff4.prst": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "dff4 prst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.21-17.25"
+          }
+        },
+        "dff4.rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "dff4 rst",
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:17.17-17.20"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/soumodeep/OpenROAD-flow-scripts/flow/designs/src/LFSR/LFSR.v:5.15-5.18"
+          }
+        }
+      }
+    }
+  }
+}
