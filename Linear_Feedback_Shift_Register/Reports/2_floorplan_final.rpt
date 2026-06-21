@@ -1,0 +1,141 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 0.26
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+core_clock period_min = 0.20 fmax = 4957.07
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: rst (input port clocked by core_clock)
+Endpoint: dff4.Q$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.09    0.09 ^ input external delay
+     2    4.90    0.00    0.00    0.09 ^ rst (in)
+                                         rst (net)
+                  0.00    0.00    0.09 ^ _17_/A2 (NOR2_X1)
+     1    1.06    0.00    0.01    0.10 v _17_/ZN (NOR2_X1)
+                                         _02_ (net)
+                  0.00    0.00    0.10 v dff4.Q$_SDFF_PP0_/D (DFF_X1)
+                                  0.10   data arrival time
+
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ dff4.Q$_SDFF_PP0_/CK (DFF_X1)
+                          0.00    0.00   library hold time
+                                  0.00   data required time
+-----------------------------------------------------------------------------
+                                  0.00   data required time
+                                 -0.10   data arrival time
+-----------------------------------------------------------------------------
+                                  0.10   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: dff4.Q$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: Q[3] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ dff4.Q$_SDFF_PP0_/CK (DFF_X1)
+     3    4.34    0.01    0.09    0.09 ^ dff4.Q$_SDFF_PP0_/Q (DFF_X1)
+                                         dff4.Q (net)
+                  0.01    0.00    0.09 ^ _25_/A (BUF_X1)
+     1    0.00    0.00    0.02    0.11 ^ _25_/Z (BUF_X1)
+                                         Q[3] (net)
+                  0.00    0.00    0.11 ^ Q[3] (out)
+                                  0.11   data arrival time
+
+                  0.00    0.46    0.46   clock core_clock (rise edge)
+                          0.00    0.46   clock network delay (ideal)
+                          0.00    0.46   clock reconvergence pessimism
+                         -0.09    0.37   output external delay
+                                  0.37   data required time
+-----------------------------------------------------------------------------
+                                  0.37   data required time
+                                 -0.11   data arrival time
+-----------------------------------------------------------------------------
+                                  0.26   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: dff4.Q$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: Q[3] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ dff4.Q$_SDFF_PP0_/CK (DFF_X1)
+     3    4.34    0.01    0.09    0.09 ^ dff4.Q$_SDFF_PP0_/Q (DFF_X1)
+                                         dff4.Q (net)
+                  0.01    0.00    0.09 ^ _25_/A (BUF_X1)
+     1    0.00    0.00    0.02    0.11 ^ _25_/Z (BUF_X1)
+                                         Q[3] (net)
+                  0.00    0.00    0.11 ^ Q[3] (out)
+                                  0.11   data arrival time
+
+                  0.00    0.46    0.46   clock core_clock (rise edge)
+                          0.00    0.46   clock network delay (ideal)
+                          0.00    0.46   clock reconvergence pessimism
+                         -0.09    0.37   output external delay
+                                  0.37   data required time
+-----------------------------------------------------------------------------
+                                  0.37   data required time
+                                 -0.11   data arrival time
+-----------------------------------------------------------------------------
+                                  0.26   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             5.15e-05   1.99e-06   3.14e-07   5.38e-05  85.3%
+Combinational          6.53e-06   2.39e-06   3.36e-07   9.26e-06  14.7%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  5.80e-05   4.38e-06   6.50e-07   6.30e-05 100.0%
+                          92.0%       7.0%       1.0%
